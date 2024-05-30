@@ -1,0 +1,15 @@
+function changeProfilePictures() {
+    const newProfilePicURL = 'https://ibb.co/crmHfKY'; // URL of the new profile picture
+  
+    // Find all profile picture elements (this selector may need to be updated if LinkedIn changes its layout)
+    const profilePics = document.querySelectorAll('img[class*="profile-picture"]');
+  
+    profilePics.forEach(img => {
+      img.src = newProfilePicURL;
+    });
+  }
+  
+  // Run the function initially and also when new content is loaded
+  changeProfilePictures();
+  document.addEventListener('scroll', changeProfilePictures);
+  

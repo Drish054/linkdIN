@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Change LinkedIn Profile Picture",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "declarativeContent"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.linkedin.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
